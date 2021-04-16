@@ -1,0 +1,57 @@
+swagger: "2.0"
+
+info:
+  title: test API
+  description: retrieve temperature & humidity and compute tests
+  version: "0.1.0"
+
+host: myazure.url.com
+basePath: /api/v1
+schemes:
+  - https
+consumes:
+  - application/json
+produces:
+  - application/json
+
+paths:
+  /data:
+    get:
+      summary: Returns a welcome tring.
+      operationId: test
+      responses:
+        200:
+          description: Welcome!
+        default:
+          description: Unexpected error
+          
+    post:
+      summary: Compute temperature and humidity stuff.
+      parameters:
+        - in: body
+          name: sensordata
+          schema:
+            $ref: '#/definitions/sensordata'
+      operationId: test_post
+      responses:
+        200:
+          description: OK
+          schema:
+            $ref: '#/definitions/sensorefficiency'
+
+definitions:
+  sensordata:
+    properties:
+      temperature:
+        type: number
+      humidity:
+        type: number
+    required:  
+      - temperature
+      - humidity
+  sensorefficiency:
+      properties:
+        value:
+          type: string
+      required:
+        - value
