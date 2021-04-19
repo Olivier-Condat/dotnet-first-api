@@ -4,5 +4,5 @@
 - Function deployed using the same plugin:
     - very minimalist function:
         - dotnetcore_httptrigger (this one returns some stuff)
-        - dotnetcore_eventgridtrigger (empty)
+        - dotnetcore_eventgridtrigger (retrieve temperature, humidity from iothub)
         - dotnetcore_eventhubtrigger (empty)
