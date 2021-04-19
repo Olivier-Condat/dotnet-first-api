@@ -6,7 +6,7 @@ using Microsoft.Extensions.Logging;
 using System.IO;
 using System.Text;
 
-namespace mytutorial.Function
+namespace dotnetfirstapi.Function
 {
     public static class dotnetcore_httptrigger
     {
